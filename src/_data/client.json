@@ -1,0 +1,15 @@
+{
+  "name": "Good Valley Web Designs",
+  "email": "hello@goodvalleyweb.com",
+  "phone": "2506814058",
+  "phoneFormatted": "(250) 681-4058",
+  "address": {
+    "lineOne": "2231 Speer Street",
+    "lineTwo": "",
+    "city": "Kelowna",
+    "county": "Canada",
+    "postcode": "V1Y2H1",
+    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+  },
+  "domain": "www.goodvalleyweb.com"
+}

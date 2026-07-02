@@ -1,0 +1,101 @@
+---
+layout: 'base.html'
+description: 'Meta description for the page'
+metaTitle: 'Title that shows up on google searches'
+tagTitle: 'Pixel Perfect Websites'
+preloadCSS: '/css/home.css'
+permalink: '/'
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+<!-- Enter html code below -->
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero">
+  <div class="cs-container">
+    <div class="cs-flex-group">
+      <span class="cs-topper">GoodValley Web Design</span>
+      <h1 class="cs-title">Custom websites for small businesses</h1>
+      <p class="cs-text">
+        Built from the ground up, beautiful and fast websites that get results
+      </p>
+      <a href="" class="cs-button-solid">Explore More</a>
+      <a href="" class="cs-button-transparent">
+        <img
+          class="cs-img"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
+          alt="play icon"
+          width="17"
+          height="17"
+/>
+        Learn More
+      </a>
+    </div>
+  </div>
+
+  <!-- Background Image -->
+  {% image './src/images/gv-landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services">
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs">
+</section>
+
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
+
+<section id="sbs-r">
+</section>
+
+<!-- ============================================ -->
+<!--             Final Call to Action             -->
+<!-- ============================================ -->
+
+<section id="cta">
+  <div class="container">
+    <h2 class="title">
+      Get It Done <br/>
+      With Us Today
+    </h2>
+    <p>
+      Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add
+      these to the bottom of all pages.
+    </p>
+    <a href="/contact" class="button-solid">Get an Estimate Now</a>
+  </div>
+  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+</section>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window
+      .netlifyIdentity
+      .on('init', (user) => {
+        if (!user) {
+          window
+            .netlifyIdentity
+            .on('login', () => {
+              document.location.href = '/admin/';
+            });
+        }
+      });
+  }
+</script>
