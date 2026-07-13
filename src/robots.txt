@@ -1,5 +1,13 @@
+User-agent: AdsBot-Google
+Disallow: /admin/
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Disallow: /admin/
+Allow: /
+
 User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://www.yourwebsite/sitemap.xml
+Sitemap: https://{{ client.domain }}/sitemap.xml

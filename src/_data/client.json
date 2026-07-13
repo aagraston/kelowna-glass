@@ -1,15 +1,15 @@
 {
-  "name": "Good Valley Web Designs",
-  "email": "hello@goodvalleyweb.com",
-  "phone": "2506814058",
-  "phoneFormatted": "(250) 681-4058",
+  "name": "Kelowna Glass",
+  "email": "kelownaglass@shaw.ca",
+  "phone": "25086907008",
+  "phoneFormatted": "(250) 869-07008",
   "address": {
-    "lineOne": "2231 Speer Street",
+    "lineOne": "2492 ENTERPRISE WAY",
     "lineTwo": "",
     "city": "Kelowna",
     "county": "Canada",
-    "postcode": "V1Y2H1",
-    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    "postcode": "V1X 6X6",
+    "mapLink": "https://maps.app.goo.gl/CYQnaVqhmiHtP7n68"
   },
-  "domain": "www.goodvalleyweb.com"
+  "domain": "www.kelownaglassandwindshield.com"
 }

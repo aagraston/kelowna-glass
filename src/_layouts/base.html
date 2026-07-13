@@ -28,12 +28,11 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- Preload -->
-        <link rel="preload" as="image" href="/assets/logo-light.png">
-        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>
+        <link rel="preload" as="image" href="/assets/images/KelownaGlassLogoColor.png">
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/open-sans-v44-latin-regular.woff2" crossorigin>
+        <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/ubuntu-v21-latin-700.woff2" crossorigin>
 
         <link rel="stylesheet" href="/css/root.css">
-        <link rel="stylesheet" href="/css/dark.css">
 
         <link rel="preload" as="image" href="{{ preloadImg }}"/>
 
@@ -61,14 +60,13 @@
         {% include "footer.html" %}
 
         <script defer src="/assets/js/nav.js"></script>
-        <script defer src="/assets/js/dark.js"></script>
 
         <!--
         This script adds a class to the body after scrolling 100px
         and we used these body.scroll styles to create some on scroll 
         animations with the navbar
     -->
-        <script defer>
+        {# <script defer>
             document.addEventListener('scroll', (e) => {
                 const scroll = document.documentElement.scrollTop;
                 if (scroll >= 100) {
@@ -83,7 +81,7 @@
                         .remove('scroll')
                 }
             });
-        </script>
+        </script> #}
 
     </body>
 </html>
