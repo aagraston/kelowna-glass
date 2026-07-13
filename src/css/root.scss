@@ -575,7 +575,7 @@
   #navigation {
     width: 100%;
     height: calc(180  / 16 * 1rem);
-    position: fixed;
+    position: Absolute;
     top: 0;
     left: 0;
     z-index: 200000;
@@ -604,6 +604,7 @@
       justify-content: space-between;
       align-items: center;
       gap: calc(100 / 16 * 1rem);
+      padding-bottom: var(--spacerLarge);
 
       .header-contact-container {
         flex-basis: 80%;
@@ -636,6 +637,34 @@
         }
       }
     }
+    .bottom-float-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: calc(100 / 16 * 1rem);
+      background-color: var(--primary);
+      width: 100%;
+      max-width: var(--sectionMaxWidth);
+      padding: calc(32 / 16 * 1rem);
+
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -25%);
+
+      #navbar-menu {
+        
+        ul {
+          li {
+            a {
+              font-family: 'Open Sans';
+              font-weight: 600;
+              font-size: calc(16/ 16 * 1rem);
+              color: var(--bodyTextColorWhite);
+            }
+          }
+        }
+      }
+    }
 
     // Logo
     .logo {
@@ -655,25 +684,23 @@
       ul {
         padding: 0;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
 
         li {
           list-style: none;
           margin-left: calc(30 / 16 * 1rem);
-          padding-top: calc(3 / 16 * 1rem);
 
           a {
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             /* 14px - 18px */
             font-size: clamp(0.875rem, 1.5vw, 1.125rem);
-            text-transform: uppercase;
             position: relative;
             z-index: 1;
 
             // Transiiton Properties
-            color: #fff;
+            color: var(--bodyTextColorWhite);
             transition: color 0.3s;
 
             &:before {
