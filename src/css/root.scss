@@ -275,6 +275,12 @@
     z-index: 10000;
     height: auto;
 
+    .top-container {
+      .header-contact-container {
+        display: none;
+      }
+    }
+
     .background-color-div {
       position: absolute;
       top: 0;
@@ -699,6 +705,8 @@
             position: relative;
             z-index: 1;
 
+            text-transform: uppercase;
+
             // Transiiton Properties
             color: var(--bodyTextColorWhite);
             transition: color 0.3s;
@@ -757,6 +765,7 @@
     }
   }
 }
+
 
 // ---------------------------------------------------------
 

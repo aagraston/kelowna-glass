@@ -9,93 +9,68 @@ eleventyNavigation:
   key: Home
   order: 100
 ---
-<!-- Enter html code below -->
 
+<!-- Enter html code below -->
 <!-- ============================================ -->
 <!--                    Hero                      -->
 <!-- ============================================ -->
-
 <section id="hero">
-  <div class="cs-container">
-    <div class="cs-flex-group">
-      <span class="cs-topper">GoodValley Web Design</span>
-      <h1 class="cs-title">Custom websites for small businesses</h1>
-      <p class="cs-text">
-        Built from the ground up, beautiful and fast websites that get results
-      </p>
-      <a href="" class="cs-button-solid">Explore More</a>
-      <a href="" class="cs-button-transparent">
-        <img
-          class="cs-img"
-          loading="lazy"
-          decoding="async"
-          src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-          alt="play icon"
-          width="17"
-          height="17"
-/>
-        Learn More
-      </a>
+  <div class="container">
+    <div class="hero-text">
+      <h1>Glass Experts</h1>
+      <h2>Serving Kelowna Since 1986</h2>
+      <p>With over 40 years of experience, we serve you the best.</p>
+      <a href="" class="button-outline">GET IN TOUCH</a>
+    </div>
+    <div class="hanger-cta">
+      <p>We offer high quality glass repair & installation services</p>
+      <a href="" class="button-primary">LEARN MORE</a>
     </div>
   </div>
-
   <!-- Background Image -->
-  {% image './src/images/gv-landing.jpg', 'mountains', 'cs-picture', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  {% image './src/images/HeroImage.png', 'glass shop employees smiling', 'hero-bg-img', 'eager', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px' %}
 </section>
-
 <!-- ============================================ -->
-<!--                  Services                    -->
+<!--                  Reviews                     -->
 <!-- ============================================ -->
-
-<section id="services">
+<section id="reviews">
+  <div class="container">
+    <div class="sbs">
+      <div class="left-side">
+        <div class="review-icons">
+          <div class="face-icons" aria-hidden="true"></div>
+          <div class="star-icons" aria-hidden="true"></div>
+        </div>
+        <p class="sub-text">Trusted by over 150 people!</p>
+        <p class="highlight">100+ Five Star Reviews from happy customers in the Okanagan</p>
+      </div>
+      <div class="right-side">
+        <div class="review-rotator" data-review-rotator aria-live="polite">
+          {%- for review in highlightedReviews %}
+            <article class="review-card{% if loop.first %} is-active{% endif %}" data-review-card>
+              <p class="review-copy">{{ review.quote }}</p>
+              <div class="review-meta">
+                <span class="review-name">{{ review.name }}</span>
+                <span class="review-role">{{ review.role }}</span>
+              </div>
+              <div class="review-stars" aria-hidden="true"></div>
+            </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
 <!-- ============================================ -->
 <!--                 Side By Side                 -->
 <!-- ============================================ -->
-
 <section id="sbs">
 </section>
-
-<!-- ============================================ -->
-<!--            Extra Content To Rank             -->
-<!-- ============================================ -->
-
-<section id="sbs-r">
-</section>
-
 <!-- ============================================ -->
 <!--             Final Call to Action             -->
 <!-- ============================================ -->
-
 <section id="cta">
-  <div class="container">
-    <h2 class="title">
-      Get It Done <br/>
-      With Us Today
-    </h2>
-    <p>
-      Say something catchy, informative, and encouraging to click the button to go to the contact page. I like to add
-      these to the bottom of all pages.
-    </p>
-    <a href="/contact" class="button-solid">Get an Estimate Now</a>
-  </div>
-  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px'%}
+  <div class="container"></div>
 </section>
 
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window
-      .netlifyIdentity
-      .on('init', (user) => {
-        if (!user) {
-          window
-            .netlifyIdentity
-            .on('login', () => {
-              document.location.href = '/admin/';
-            });
-        }
-      });
-  }
-</script>
+<script defer src="/assets/js/reviews.js"></script>
