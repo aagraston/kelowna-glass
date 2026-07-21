@@ -4,6 +4,7 @@ description: 'Providing high-quality glass services for residential and commerci
 metaTitle: "Serving Kelowna's Glass Needs | Kelowna Glass"
 tagTitle: 'A Variety of Glass Services for your Home or Business'
 preloadCSS: '/css/home.css'
+preloadJS: '/'
 permalink: '/'
 eleventyNavigation:
   key: Home
@@ -18,8 +19,12 @@ eleventyNavigation:
   <div class="container">
     <div class="hero-text">
       <h1>Glass Experts</h1>
-      <h2>Serving Kelowna Since 1986</h2>
-      <p>With over 40 years of experience, we serve you the best.</p>
+      <h2>
+        Serving Kelowna Since <span>1986</span>
+      </h2>
+      <p>
+        With over <span>40 years</span> of experience, we serve you the best.
+      </p>
       <a href="" class="button-outline">GET IN TOUCH</a>
     </div>
     <div class="hanger-cta">
@@ -33,6 +38,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 <!--                  Reviews                     -->
 <!-- ============================================ -->
+<!-- EDIT AND INJECT JS FOR ROTATOR -->
 <section id="reviews">
   <div class="container">
     <div class="sbs">
@@ -47,13 +53,13 @@ eleventyNavigation:
       <div class="right-side">
         <div class="review-rotator" data-review-rotator aria-live="polite">
           {%- for review in highlightedReviews %}
-            <article class="review-card{% if loop.first %} is-active{% endif %}" data-review-card>
+            <article class="review-card{% if loop.first %} is-active{% endif %}"
+                     data-review-card>
+              <div class="review-stars" aria-hidden="true"></div>
               <p class="review-copy">{{ review.quote }}</p>
               <div class="review-meta">
                 <span class="review-name">{{ review.name }}</span>
-                <span class="review-role">{{ review.role }}</span>
               </div>
-              <div class="review-stars" aria-hidden="true"></div>
             </article>
           {%- endfor %}
         </div>
@@ -62,15 +68,150 @@ eleventyNavigation:
   </div>
 </section>
 <!-- ============================================ -->
-<!--                 Side By Side                 -->
+<!--                  Who We Are                  -->
 <!-- ============================================ -->
-<section id="sbs">
+<section id="who-we-are">
+  <div class="container">
+    <div class="sbs">
+      <div class="left-side">
+        <div class="eyebrow">
+          <img src="/assets/images/eyebrow_flag_end.png" class="reverse">
+          <h1>ABOUT US</h1>
+          <img src="/assets/images/eyebrow_flag_end.png">
+        </div>
+        <h2>Who We Are</h2>
+        <p>
+          We are a locally owned family business. We have years of experience repairing and installing glass. We value quality and are constantly striving to not only meet, but exceed our customers expectations.
+        </p>
+        <p>
+          Serving the Okanagan has been an amazing experience. We’ve grown many incredible relationships over the years installing & repairing glass.
+        </p>
+        <p>We value quality, integrity and honesty. Our business practices and the quality of our work speaks for itself.</p>
+      </div>
+      <div class="right-side">
+        {% image './src/images/storefrontimg.png', 'a photo of the front of Kelowna Glass', 'who-we-are-img', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920px' %}
+      </div>
+    </div>
+  </div>
 </section>
 <!-- ============================================ -->
-<!--             Final Call to Action             -->
+<!--             Feature Highlights               -->
 <!-- ============================================ -->
-<section id="cta">
+<section id="feature-highlights">
   <div class="container"></div>
 </section>
-
+<!-- ============================================ -->
+<!--                 What We Do                   -->
+<!-- ============================================ -->
+<section id="what-we-do">
+  <div class="container">
+    <div class="sbs">
+      <div class="left-side">
+        <div class="eyebrow">
+          <img src="/assets/images/eyebrow_flag_end.png" class="reverse">
+          <h1>OUR SERVICES</h1>
+          <img src="/assets/images/eyebrow_flag_end.png">
+        </div>
+        <h2>What We Do</h2>
+        <p>
+          Repairing glass is what we do. We have a range of high quality tools and equipment that we use in shop, or on-call.
+        </p>
+        <p>We repair automative, commercial buildings and residential buildings.</p>
+        <p>When you think glass repair, think Kelowna Glass.</p>
+      </div>
+      <div class="right-side">
+        <ul>
+          <li>
+            <img src="/assets/images/CheckmarkIcon.png">
+            <div class="content">
+              <h2>Auto Glass Repair & Replacement</h2>
+              <p>Windshields, rock chip repair, side windows, rear glass, and mobile auto glass service.</p>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/CheckmarkIcon.png">
+            <div class="content">
+              <h2>Residential Glass Service</h2>
+              <p>Window repair, sealed unit replacement, mirrors, shower glass, and custom home glass solutions.</p>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/CheckmarkIcon.png">
+            <div class="content">
+              <h2>Commercial Glass Solutions</h2>
+              <p>Storefront glass, office partitions, commercial doors, and property maintenance services.</p>
+            </div>
+          </li>
+          <li>
+            <img src="/assets/images/CheckmarkIcon.png">
+            <div class="content">
+              <h2>Emergency Glass Repair</h2>
+              <p>Fast response for broken windows, storefront damage, and urgent glass replacement needs.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    <a href="" class="button-primary">GET A QUOTE</a>
+  </div>
+</section>
+<!-- ============================================ -->
+<!--                  Car Logos                   -->
+<!-- ============================================ -->
+<section id="car-logos">
+  <div class="container"></div>
+</section>
+<!-- ============================================ -->
+<!--                Call to Action                -->
+<!-- ============================================ -->
+<section id="cta">
+  <div class="container">
+    <h1>Reach Out For A Quote</h1>
+    <div class="sbs">
+      <div class="left-side">
+        <p>We’re ready to help you with all of your glass needs. Let us know how we can help you today!</p>
+        <hr />
+        <div class="contact-points">
+          <div class="contact-point">
+            <a href="mailto:kelownaglass@shaw.ca">
+              <img src="">
+              <p>KELOWNAGLASS@SHAW.CA</p>
+            </a>
+          </div>
+          <div class="contact-point">
+            <a href="tel:+12508690700">
+              <img src="">
+              <p>(250) 869-0700</p>
+            </a>
+          </div>
+          <div class="contact-point">
+            <a href="">
+              <img src="">
+              <p>2492 ENTERPRISE WAY</p>
+            </a>
+            <p class="sub-title">Kelowna, BC</p>
+          </div>
+        </div>
+      </div>
+      <div class="right-side">
+        <form action="" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="button-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
 <script defer src="/assets/js/reviews.js"></script>

@@ -1,0 +1,425 @@
+/*-- -------------------------- -->
+<---            Hero            -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #hero {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: var(--betweenSectionPadding);
+    .container {
+      z-index: 1;
+      padding-top: calc(60.8 / 16 * 1rem);
+      height: 100vh;
+
+      .hero-text {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 700;
+          font-size: calc(65 / 16 * 1rem);
+          text-align: center;
+          color: var(--bodyTextColorWhite);
+        }
+        h2 {
+          font-family: "Ubuntu", sans-serif;
+          font-weight: 400;
+          font-size: calc(35 / 16 * 1rem);
+          font-style: italic;
+          text-align: center;
+          color: var(--bodyTextColorWhite);
+          margin-bottom: calc(26 / 16 * 1rem);
+          span {
+            font-weight: 700;
+            font-style: italic;
+          }
+        }
+        p {
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: calc(20 / 16 * 1rem);
+          text-align: center;
+          color: var(--bodyTextColorWhite);
+          span {
+            font-weight: 700;
+            font-style: italic;
+          }
+          margin-bottom: var(--spacerLarge);
+        }
+      }
+      .hanger-cta {
+        display: none;
+      }
+    }
+    picture.hero-bg-img {
+      z-index: 0;
+      position: absolute;
+      top: calc(60.8 / 16 * 1rem);
+      width: 100%;
+      height: calc(631 / 16 * 1rem);
+      display: block;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: auto;
+        min-height: calc(631 / 16 * 1rem);
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+  #hero {
+    .container {
+      padding-top: calc(180 / 16 * 1rem);
+    }
+    picture.hero-bg-img {
+      top: calc(180 / 16 * 1rem);
+    }
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #reviews {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---         Who We Are         -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #who-we-are {
+    margin-bottom: var(--betweenSectionPadding);
+    .container {
+      max-width: var(--sectionMaxWidth);
+
+      .sbs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .left-side {
+          margin-bottom: var(--spacerMedium);
+          .eyebrow {
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+          h2 {
+            font-familiy: "Ubuntu", sans-serif;
+            font-weight: 500;
+            font-size: calc(55 / 16 * 1rem);
+            text-align: center;
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+          p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: calc(20 / 16 * 1rem);
+            text-align: center;
+            margin-bottom: var(--spacerMedium);
+          }
+        }
+        .right-side {
+          width: 100%;
+          picture {
+            max-width: 100%;
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #who-we-are {
+    margin-bottom: var(--betweenSectionPadding);
+    .container {
+      max-width: var(--sectionMaxWidth);
+
+      .sbs {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        .left-side {
+          max-width: 47%;
+          margin-bottom: var(--spacerMedium);
+          .eyebrow {
+            justify-content: start;
+            margin-bottom: calc(32 / 16 * 1rem);
+            img.reverse {
+              display: none;
+            }
+          }
+          h2 {
+            text-align: left;
+          }
+          p {
+            text-align: left;
+          }
+        }
+        .right-side {
+          width: 47%;
+          picture {
+            max-width: 100%;
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---     Feature Highlights     -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---         What We Do         -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+  #what-we-do {
+    margin-bottom: var(--betweenSectionPadding);
+    .container {
+      max-width: var(--sectionMaxWidth);
+      .sbs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .left-side {
+          margin-bottom: var(--spacerMedium);
+          .eyebrow {
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+          h2 {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 500;
+            font-size: calc(55 / 16 * 1rem);
+            text-align: center;
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+          p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: calc(20 / 16 * 1rem);
+            text-align: center;
+            margin-bottom: var(--spacerMedium);
+          }
+        }
+        .right-side {
+          img {
+            width: calc(45 / 16 * 1rem);
+            height: calc(45 / 16 * 1rem);
+          }
+          ul {
+            list-style: none;
+            li {
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: start;
+              gap: var(--spacerSmall);
+              h2 {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 600;
+                font-size: calc(22 / 16 * 1rem);
+                margin-bottom: var(--spacerSmall);
+              }
+              margin-bottom: var(--spacerMedium);
+              p {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                font-size: calc(20 / 16 * 1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+  #what-we-do {
+    margin-bottom: var(--betweenSectionPadding);
+    .container {
+      max-width: var(--sectionMaxWidth);
+      .sbs {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+        .left-side {
+          h2 {
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 500;
+            font-size: calc(55 / 16 * 1rem);
+            text-align: left;
+            margin-bottom: calc(32 / 16 * 1rem);
+          }
+          p {
+            font-family: "Open Sans", sans-serif;
+            font-weight: 400;
+            font-size: calc(20 / 16 * 1rem);
+            text-align: left;
+            margin-bottom: var(--spacerMedium);
+          }
+          .eyebrow {
+            justify-content: start;
+            img.reverse {
+              display: none;
+            }
+          }
+          width: 47%;
+        }
+        .right-side {
+          width: 47%;
+          ul {
+            list-style: none;
+            li {
+              display: flex;
+              flex-direction: row;
+              justify-content: start;
+              align-items: start;
+              gap: var(--spacerSmall);
+              h2 {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 600;
+                font-size: calc(22 / 16 * 1rem);
+                margin-bottom: var(--spacerSmall);
+              }
+              margin-bottom: var(--spacerMedium);
+              p {
+                font-family: "Open Sans", sans-serif;
+                font-weight: 400;
+                font-size: calc(20 / 16 * 1rem);
+              }
+            }
+          }
+        }
+      }
+      a.button-primary {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---         Car Logos          -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}
+
+/*-- -------------------------- -->
+<---      Call To Action        -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0em) {
+}
+
+/* Tablet */
+@media only screen and (min-width: 48em) {
+}
+
+/* Small Desktop */
+@media only screen and (min-width: 64em) {
+}
+
+/* Desktop */
+@media only screen and (min-width: 75em) {
+}

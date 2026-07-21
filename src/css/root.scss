@@ -186,46 +186,47 @@
   }
 
   // Buttons
-  .button-solid {
-    font-size: calc(16 / 16 * 1rem);
+  .button-outline {
+    font-size: calc(18 / 16 * 1rem);
     text-decoration: none;
-    display: inline-block;
-    width: auto;
-    line-height: calc(50 / 16 * 1rem);
-    height: calc(50 / 16 * 1rem);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: calc(45 / 16 * 1rem);
     text-align: center;
     padding: 0 calc(30 / 16 * 1rem);
+    white-space: nowrap;
     position: relative;
     z-index: 1;
-    background-color: var(--primary);
+    //background-color: var(--primary);
 
     // Transition Properties
-    color: #000;
+    color: var(--bodyTextColorWhite);
+    border: var(--bodyTextColorWhite) 1px solid;
     transition: color 0.3s;
     transition-delay: 0.1s;
+  }
 
-    &:hover {
-      color: #fff;
-      &:before {
-        width: 100%;
-      }
-    }
+  .button-primary {
+    font-size: calc(18 / 16 * 1rem);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: calc(45 / 16 * 1rem);
+    text-align: center;
+    padding: 0 calc(30 / 16 * 1rem);
+    white-space: nowrap;
+    position: relative;
+    z-index: 1;
+    background-color: var(--primaryRed);
 
-    &:before {
-      content: "";
-      position: absolute;
-      display: block;
-      height: 100%;
-      opacity: 1;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      background-color: #000;
-
-      //Transition properties
-      width: 0;
-      transition: width 0.3s;
-    }
+    // Transition Properties
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+    transition-delay: 0.1s;
   }
 
   // Hidden Screen reader skip nav button
@@ -240,6 +241,34 @@
   //visually-hidden keeps screen-reader only items from being seen
   .visually-hidden {
     opacity: 0;
+  }
+
+  //
+  // GLOBAL STYLES
+  //
+
+  .eyebrow {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    h1 {
+      font-family: "Open Sans", sans-serif;
+      font-weight: 600;
+      background-color: var(--primary);
+      font-size: calc(20 / 16 * 1rem);
+      color: var(--bodyTextColorWhite);
+      padding: calc(8 / 16 * 1rem) calc(32 / 16 * 1rem);
+      display: inline-block;
+      width: fit-content;
+    }
+    img {
+      height: calc(43.2 / 16 * 1rem);
+    }
+    img.reverse {
+      transform: scaleX(-1);
+    }
   }
 }
 
@@ -580,7 +609,7 @@
   // Navigation Styles
   #navigation {
     width: 100%;
-    height: calc(180  / 16 * 1rem);
+    height: calc(180 / 16 * 1rem);
     position: Absolute;
     top: 0;
     left: 0;
@@ -630,12 +659,12 @@
           }
           .text-container {
             .top-text {
-              font-family: 'open sans', sans-serif;
+              font-family: "open sans", sans-serif;
               font-size: calc(18 / 16 * 1rem);
               font-weight: 700;
             }
             .bottom-text {
-              font-family: 'open sans', sans-serif;
+              font-family: "open sans", sans-serif;
               font-size: calc(18 / 16 * 1rem);
               font-weight: 400;
             }
@@ -658,13 +687,12 @@
       transform: translate(-50%, -25%);
 
       #navbar-menu {
-        
         ul {
           li {
             a {
-              font-family: 'Open Sans';
+              font-family: "Open Sans";
               font-weight: 600;
-              font-size: calc(16/ 16 * 1rem);
+              font-size: calc(16 / 16 * 1rem);
               color: var(--bodyTextColorWhite);
             }
           }
@@ -765,7 +793,6 @@
     }
   }
 }
-
 
 // ---------------------------------------------------------
 
