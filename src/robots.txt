@@ -10,4 +10,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: https://{{ client.domain }}/sitemap.xml
+Sitemap: https://kelownaglassandwindshield.com/sitemap.xml
