@@ -167,7 +167,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 <section id="cta">
   <div class="container">
-    <h1>Reach Out For A Quote</h1>
+    <h1>REACH OUT FOR A QUOTE</h1>
     <div class="sbs">
       <div class="left-side">
         <p>We’re ready to help you with all of your glass needs. Let us know how we can help you today!</p>
@@ -175,37 +175,70 @@ eleventyNavigation:
         <div class="contact-points">
           <div class="contact-point">
             <a href="mailto:kelownaglass@shaw.ca">
-              <img src="">
+              <img src="/assets/images/EmailIcon.png">
               <p>KELOWNAGLASS@SHAW.CA</p>
             </a>
           </div>
           <div class="contact-point">
             <a href="tel:+12508690700">
-              <img src="">
+              <img src="/assets/images/PhoneIconWhite.png">
               <p>(250) 869-0700</p>
             </a>
           </div>
           <div class="contact-point">
             <a href="">
-              <img src="">
+              <img src="/assets/images/AddressIconWhite.png">
+              <div class="text">
               <p>2492 ENTERPRISE WAY</p>
+              <p class="sub-title">Kelowna, BC</p>
+              </div>
             </a>
-            <p class="sub-title">Kelowna, BC</p>
+            
           </div>
         </div>
       </div>
       <div class="right-side">
         <form action="" method="POST" class="contact-form">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
+          <fieldset class="form-group personal-info">
+            <legend>Personal Info</legend>
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+          </fieldset>
+
+          <fieldset class="form-group service-selection">
+            <legend>Services Needed</legend>
+            <div class="service-options">
+              <label>
+                <input type="checkbox" name="services[]" value="auto-glass" />
+                Auto Glass Repair & Replacement
+              </label>
+              <label>
+                <input type="checkbox" name="services[]" value="residential-glass" />
+                Residential Glass Service
+              </label>
+              <label>
+                <input type="checkbox" name="services[]" value="commercial-glass" />
+                Commercial Glass Solutions
+              </label>
+              <label>
+                <input type="checkbox" name="services[]" value="emergency-repair" />
+                Emergency Glass Repair
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="form-field additional-info">
+            <label for="message">Additional Info</label>
             <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <button type="submit" class="button-primary">Submit</button>
