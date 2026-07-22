@@ -198,7 +198,14 @@ eleventyNavigation:
         </div>
       </div>
       <div class="right-side">
-        <form action="" method="POST" class="contact-form">
+        <form
+        name="contact"
+        method="post" 
+        class="contact-form"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        netlify
+        >
           <fieldset class="form-group personal-info">
             <legend>Personal Info</legend>
             <div class="form-field">
@@ -236,11 +243,19 @@ eleventyNavigation:
               </label>
             </div>
           </fieldset>
+          <!-- Required hidden input: must match the form's name -->
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot field (hidden from users with CSS) -->
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
 
           <div class="form-field additional-info">
             <label for="message">Additional Info</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+            <textarea id="message" name="message" placeholder="Let us know how we can help you" rows="4" required></textarea>
           </div>
+          <div data-netlify-recaptcha="true" data-theme="dark"></div>
           <button type="submit" class="button-primary">Submit</button>
         </form>
       </div>
