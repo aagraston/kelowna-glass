@@ -147,6 +147,10 @@
     transition: background-color 0.3s;
   }
 
+  .hidden {
+    display: none !important;
+  }
+
   /* common means of creating side margin for site */
   .container {
     position: relative;

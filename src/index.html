@@ -151,7 +151,6 @@ eleventyNavigation:
           </li>
         </ul>
       </div>
-      
     </div>
     <a href="/#cta" class="button-primary">GET A QUOTE</a>
   </div>
@@ -189,23 +188,21 @@ eleventyNavigation:
             <a href="">
               <img src="/assets/images/AddressIconWhite.png">
               <div class="text">
-              <p>2492 ENTERPRISE WAY</p>
-              <p class="sub-title">Kelowna, BC</p>
+                <p>2492 ENTERPRISE WAY</p>
+                <p class="sub-title">Kelowna, BC</p>
               </div>
             </a>
-            
           </div>
         </div>
       </div>
       <div class="right-side">
-        <form
-        name="contact"
-        method="post" 
-        class="contact-form"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        netlify
-        >
+        <form name="contact"
+              method="post"
+              class="contact-form"
+              enctype="multipart/form-data"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+              netlify>
           <fieldset class="form-group personal-info">
             <legend>Personal Info</legend>
             <div class="form-field">
@@ -221,7 +218,6 @@ eleventyNavigation:
               <input type="tel" id="phone" name="phone" />
             </div>
           </fieldset>
-
           <fieldset class="form-group service-selection">
             <legend>Services Needed</legend>
             <div class="service-options">
@@ -244,16 +240,68 @@ eleventyNavigation:
             </div>
           </fieldset>
           <!-- Required hidden input: must match the form's name -->
-        <input type="hidden" name="form-name" value="contact" />
-
-        <!-- Honeypot field (hidden from users with CSS) -->
-        <p class="hidden">
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
+          <input type="hidden" name="form-name" value="contact" />
+          <!-- Honeypot field (hidden from users with CSS) -->
+          <p class="hidden">
+            <label>
+              Don’t fill this out:
+              <input name="bot-field" />
+            </label>
+          </p>
+          <div class="form-photo-uploads">
+            <p class="photo-upload-label">Insurance/VIN Photo Upload</p>
+            <div class="form-photo-upload">
+              <input id="photo-1"
+                     name="photo-1"
+                     type="file"
+                     accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+                     data-photo-upload>
+            </div>
+            <div class="form-photo-upload hidden" data-photo-wrapper>
+              <label for="photo-2">Additional Photo</label>
+              <input id="photo-2"
+                     name="photo-2"
+                     type="file"
+                     accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+                     data-photo-upload
+                     disabled>
+            </div>
+            <div class="form-photo-upload hidden" data-photo-wrapper>
+              <label for="photo-3">Additional Photo</label>
+              <input id="photo-3"
+                     name="photo-3"
+                     type="file"
+                     accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+                     data-photo-upload
+                     disabled>
+            </div>
+            <div class="form-photo-upload hidden" data-photo-wrapper>
+              <label for="photo-4">Additional Photo</label>
+              <input id="photo-4"
+                     name="photo-4"
+                     type="file"
+                     accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+                     data-photo-upload
+                     disabled>
+            </div>
+            <div class="form-photo-upload hidden" data-photo-wrapper>
+              <label for="photo-5">Additional Photo</label>
+              <input id="photo-5"
+                     name="photo-5"
+                     type="file"
+                     accept=".jpg,.jpeg,.png,.webp,.gif,image/jpeg,image/png,image/webp,image/gif"
+                     data-photo-upload
+                     disabled>
+            </div>
+            <small>Accepted formats: JPG, PNG, WebP, or GIF. Maximum combined form size: 8 MB.</small>
+          </div>
           <div class="form-field additional-info">
             <label for="message">Additional Info</label>
-            <textarea id="message" name="message" placeholder="Let us know how we can help you" rows="4" required></textarea>
+            <textarea id="message"
+                      name="message"
+                      placeholder="Let us know how we can help you"
+                      rows="4"
+                      required></textarea>
           </div>
           <div data-netlify-recaptcha="true" data-theme="dark"></div>
           <button type="submit" class="button-primary">Submit</button>
@@ -263,3 +311,4 @@ eleventyNavigation:
   </div>
 </section>
 <script defer src="/assets/js/reviews.js"></script>
+<script defer src="/assets/js/photo-upload.js"></script>

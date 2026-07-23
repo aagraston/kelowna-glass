@@ -250,15 +250,15 @@
 @media only screen and (min-width: 0em) {
   #what-we-do {
     margin-bottom: var(--betweenSectionPadding);
-    
+
     .container {
       max-width: var(--sectionMaxWidth);
       a.button-primary {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      line-height: calc(45 / 16 * 1rem);
-    }
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        line-height: calc(45 / 16 * 1rem);
+      }
       .sbs {
         display: flex;
         flex-direction: column;
@@ -323,9 +323,9 @@
     margin-bottom: var(--betweenSectionPadding);
     .container {
       a.button-primary {
-      display: block;
-      line-height: calc(45 / 16 * 1rem);
-    }
+        display: block;
+        line-height: calc(45 / 16 * 1rem);
+      }
       max-width: var(--sectionMaxWidth);
       .sbs {
         flex-direction: row;
@@ -425,7 +425,7 @@
       max-width: var(--sectionMaxWidth);
       h1 {
         color: var(--bodyTextColorWhite);
-        font-family: 'Ubuntu', sans-serif;
+        font-family: "Ubuntu", sans-serif;
         font-weight: 700;
         font-size: calc(55 / 16 * 1rem);
         text-align: center;
@@ -445,7 +445,7 @@
           }
           p {
             color: var(--bodyTextColorWhite);
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Open Sans", sans-serif;
             font-weight: 400;
             font-size: calc(20 / 16 * 1rem);
             text-align: center;
@@ -461,12 +461,12 @@
             gap: calc(16 / 16 * 1rem);
             .contact-point {
               a {
-              display: flex;
-              flex-direction: row;
-              justify-content: start;
-              align-items: center;
-              text-decoration: none;
-              gap: calc(12 / 16 * 1rem);
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                text-decoration: none;
+                gap: calc(12 / 16 * 1rem);
               }
               img {
                 width: calc(30 / 16 * 1rem);
@@ -531,16 +531,44 @@
                 font-size: calc(18 / 16 * 1rem);
               }
             }
+            .form-photo-uploads {
+              display: flex;
+              flex-direction: column;
+              gap: calc(16 / 16 * 1rem);
+              .photo-upload-label {
+                font-family: "Ubuntu", sans-serif;
+                font-size: calc(20 / 16 * 1rem);
+                font-weight: 700;
+              }
+            }
+            .form-photo-upload {
+              display: flex;
+              flex-direction: column;
+              gap: calc(8 / 16 * 1rem);
+              label {
+                font-family: "Open Sans", sans-serif;
+                font-size: calc(14 / 16 * 1rem);
+                font-weight: 500;
+              }
+            }
+            .g-recaptcha {
+              div:first-child {
+                width: 100%;
+                iframe {
+                  width: 100% important;
+                }
+              }
+            }
 
             .additional-info {
               width: 100%;
-              display: flex; 
+              display: flex;
               flex-direction: column;
               gap: calc(8 / 16 * 1rem);
               textarea {
                 padding-top: calc(6 / 16 * 1rem);
-                  padding-bottom: calc(6 / 16 * 1rem);
-                  padding-left: calc(12 / 16 * 1rem);
+                padding-bottom: calc(6 / 16 * 1rem);
+                padding-left: calc(12 / 16 * 1rem);
               }
             }
           }
@@ -571,7 +599,6 @@
           }
         }
         .right-side {
-          
         }
       }
     }
