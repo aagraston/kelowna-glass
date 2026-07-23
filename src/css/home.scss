@@ -250,8 +250,15 @@
 @media only screen and (min-width: 0em) {
   #what-we-do {
     margin-bottom: var(--betweenSectionPadding);
+    
     .container {
       max-width: var(--sectionMaxWidth);
+      a.button-primary {
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      line-height: calc(45 / 16 * 1rem);
+    }
       .sbs {
         display: flex;
         flex-direction: column;
@@ -315,6 +322,10 @@
   #what-we-do {
     margin-bottom: var(--betweenSectionPadding);
     .container {
+      a.button-primary {
+      display: block;
+      line-height: calc(45 / 16 * 1rem);
+    }
       max-width: var(--sectionMaxWidth);
       .sbs {
         flex-direction: row;
@@ -368,9 +379,6 @@
             }
           }
         }
-      }
-      a.button-primary {
-        display: none;
       }
     }
   }
